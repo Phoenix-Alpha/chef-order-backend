@@ -1,0 +1,20 @@
+CREATE TABLE chef (
+	`id` bigint NOT NULL AUTO_INCREMENT,
+	`user_id` bigint NOT NULL,
+	`status` varchar(32) NOT NULL DEFAULT 'NORMAL',
+	`created_at` timestamp DEFAULT current_timestamp(),
+	`updated_at` timestamp DEFAULT current_timestamp(),
+	`profile_picture` varchar(256) DEFAULT NULL,
+	`profile_name` varchar(32) NOT NULL,
+	`about_me` varchar(256) NOT NULL,
+	`sell_plan` varchar(32) NOT NULL,
+	`active_offers` int NOT NULL DEFAULT 0,
+	`meals_pending` int NOT NULL DEFAULT 0,
+	`meals_inprep` int NOT NULL DEFAULT 0,
+	`meals_served` int NOT NULL DEFAULT 0,
+	`rating` decimal(2,1) NOT NULL DEFAULT 0.0,
+	`total_reviews` int NOT NULL DEFAULT 0,
+	`referral_code` varchar(20) DEFAULT NULL,
+	PRIMARY KEY (`id`),
+	CONSTRAINT `fk_chef_user_id` FOREIGN KEY (`user_id`) REFERENCES users(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

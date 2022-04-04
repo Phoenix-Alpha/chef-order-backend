@@ -1,0 +1,16 @@
+use halal_admin;
+DROP TABLE IF EXISTS `offer_tag`;
+DROP TABLE IF EXISTS `offer_allergen`;
+DROP TABLE IF EXISTS `offer_cuisine`;
+DROP TABLE IF EXISTS `offer`;
+DROP TABLE IF EXISTS `chef_cuisine`;
+DROP TABLE IF EXISTS `chef`;
+DROP TABLE IF EXISTS `role_user`;
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `cuisine`;
+DROP TABLE IF EXISTS `tag`;
+DROP TABLE IF EXISTS `allergen`;
+DROP TABLE IF EXISTS `currency`;
+DROP TABLE IF EXISTS `role`;
+DROP TABLE IF EXISTS `language`;
+DROP TABLE IF EXISTS `currency`;
